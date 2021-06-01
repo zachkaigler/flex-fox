@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/flex-fox/static/css/main.7666109c.chunk.css",
-    "main.js": "/flex-fox/static/js/main.4ab05f69.chunk.js",
-    "main.js.map": "/flex-fox/static/js/main.4ab05f69.chunk.js.map",
+    "main.css": "/flex-fox/static/css/main.4da57b46.chunk.css",
+    "main.js": "/flex-fox/static/js/main.77f546da.chunk.js",
+    "main.js.map": "/flex-fox/static/js/main.77f546da.chunk.js.map",
     "runtime-main.js": "/flex-fox/static/js/runtime-main.45af085e.js",
     "runtime-main.js.map": "/flex-fox/static/js/runtime-main.45af085e.js.map",
     "static/js/2.d5414d9e.chunk.js": "/flex-fox/static/js/2.d5414d9e.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.e2501d77.chunk.js": "/flex-fox/static/js/3.e2501d77.chunk.js",
     "static/js/3.e2501d77.chunk.js.map": "/flex-fox/static/js/3.e2501d77.chunk.js.map",
     "index.html": "/flex-fox/index.html",
-    "static/css/main.7666109c.chunk.css.map": "/flex-fox/static/css/main.7666109c.chunk.css.map",
+    "static/css/main.4da57b46.chunk.css.map": "/flex-fox/static/css/main.4da57b46.chunk.css.map",
     "static/js/2.d5414d9e.chunk.js.LICENSE.txt": "/flex-fox/static/js/2.d5414d9e.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.45af085e.js",
     "static/js/2.d5414d9e.chunk.js",
-    "static/css/main.7666109c.chunk.css",
-    "static/js/main.4ab05f69.chunk.js"
+    "static/css/main.4da57b46.chunk.css",
+    "static/js/main.77f546da.chunk.js"
   ]
 }
