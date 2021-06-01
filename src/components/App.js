@@ -55,33 +55,36 @@ function App() {
       <div className="sticky">
         <div id="header">
           <img src="https://i.imgur.com/m3t26eT.png" alt="logo" style={{height: "80px"}}/>
-          <h2>An adorable Flexbox learning tool.</h2>
+          <h2>An adorable Flexbox visualizer.</h2>
           <h3>Made with the <a href="https://randomfox.ca/">Random Fox API.</a></h3>
         </div>
         <div id="filters">
-            <h3>Flexbox Container Attributes:</h3>
+            <span className="select-label select-label-bold">.container &#123; </span><span className="select-label">flex-direction:</span>
             <select name="flex-direction" onChange={e => handleDirChange(e)}>
-              <option value="a">flex-direction</option>
-              <option value="a">row</option>
-              <option value="b">row-reverse</option>
-              <option value="c">column</option>
-              <option value="d">column-reverse</option>
+              {/* <option value="a">flex-direction</option> */}
+              <option value="a">row;</option>
+              <option value="b">row-reverse;</option>
+              <option value="c">column;</option>
+              <option value="d">column-reverse;</option>
             </select>
+            <span className="select-label"> flex-wrap:</span>
             <select name="flex-wrap" onChange={e => handleWrapChange(e)}>
-              <option value="1">flex-wrap</option>
-              <option value="1">wrap</option>
-              <option value="2">wrap-reverse</option>
-              <option value="3">nowrap</option>
+              {/* <option value="1">flex-wrap</option> */}
+              <option value="1">wrap;</option>
+              <option value="2">wrap-reverse;</option>
+              <option value="3">nowrap;</option>
             </select>
+            <span className="select-label"> justify-content:</span>
             <select name="justify-content" onChange={e => handleJustifyChange(e)}>
-              <option value="ff">justify-content</option>
-              <option value="aa">flex-start</option>
-              <option value="bb">flex-end</option>
-              <option value="cc">center</option>
-              <option value="dd">space-between</option>
-              <option value="ee">space-around</option>
-              <option value="ff">space-evenly</option>
+              {/* <option value="ff">justify-content</option> */}
+              <option value="ff">space-evenly;</option>
+              <option value="dd">space-between;</option>
+              <option value="ee">space-around;</option>
+              <option value="cc">center;</option>
+              <option value="aa">flex-start;</option>
+              <option value="bb">flex-end;</option>
             </select>
+            <span className="select-label select-label-bold"> &#125;</span>
         </div>
       </div>
       {/* Flex container!!! */}

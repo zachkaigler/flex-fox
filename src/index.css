@@ -114,7 +114,6 @@ background-color: #ffd4a9;
 #filters {
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
   background-color: #f7c089;
 }
 
@@ -123,15 +122,27 @@ background-color: #ffd4a9;
 }
 
 #filters select {
+  margin-top: 10px;
   margin-bottom: 10px;
   margin-left: 10px;
-  margin-right: 10px;
+  margin-right: 2px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 15px;
+  background-color: transparent;
+  border-color: transparent;
+  color: #4b4b4b;
+  outline: none;
 }
 
-#filters h3 {
-  margin: 0px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+.select-label {
+  background-color: transparent;
+  font-family: 'Courier New', Courier, monospace;
+  color: #4b4b4b;
+  font-size: 15px;
+}
+
+.select-label-bold {
+  font-weight: bold;
 }
 
 .card img {
