@@ -54,7 +54,7 @@ function App() {
     <div className="page">
       <div className="sticky">
         <div id="header">
-          <img src="https://i.imgur.com/gV3WbHd.png" alt="logo" style={{height: "170px"}}/>
+          <img src="https://i.imgur.com/m3t26eT.png" alt="logo" style={{height: "80px"}}/>
           <h2>An adorable Flexbox learning tool.</h2>
           <h3>Made with the <a href="https://randomfox.ca/">Random Fox API.</a></h3>
         </div>
