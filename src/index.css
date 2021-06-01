@@ -1,13 +1,968 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  background-color: #fff1e3;
+}
+
+.card {
+  position: relative;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.num {
+  background-color: transparent;
+  position: absolute;
+  top: 18px;
+  left: 20px;
+  font-weight: bolder; 
+  font-size: 21px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  /* width: 100%; */
+  /* overflow: auto;  */
+  /* display: inline-block */
+}
+
+#header {
+  text-align: center;
+  background-color: #ffd4a9;
+  margin: 0px;
+}
+
+#header img {
+background-color: #ffd4a9;
+}
+
+#filters {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f7c089;
+}
+
+#filters h3 {
+  background-color: #f7c089;
+}
+
+#filters select {
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#filters h3 {
+  margin: 0px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.card img {
+  margin: 15px;
+  box-shadow: 10px 10px 8px #b1b1b1;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding-bottom: 75px;
+  margin-left: 150px;
+  margin-right: 150px;
+}
+
+/* default - row, wrap, space even */
+.a1 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding-bottom: 75px;
+  margin-left: 150px;
+  margin-right: 150px;
+}
+
+/*  */
+
+.a-1-aa {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding-bottom: 75px;
+  margin-left: 150px;
+  margin-right: 150px;
+  overflow: auto
+}
+
+.a-1-bb {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  padding-bottom: 75px;
+  margin-left: 150px;
+  margin-right: 150px;
+  overflow: auto
+}
+
+.a-1-cc {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 75px;
+  margin-left: 150px;
+  margin-right: 150px;
+  overflow: auto
+}
+
+.a-1-dd {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 75px;
+  margin-left: 150px;
+  margin-right: 150px;
+  overflow: auto
+}
+
+.a-1-ee {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-bottom: 75px;
+  margin-left: 150px;
+  margin-right: 150px;
+  overflow: auto
+}
+
+.a-1-ff {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding-bottom: 75px;
+  margin-left: 150px;
+  margin-right: 150px;
+  overflow: auto
+}
+
+.a-2-aa {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap-reverse;
+  justify-content: flex-start;
+  padding-bottom: 75px;
+  margin-left: 150px;
+  margin-right: 150px;
+  overflow: auto
+}
+
+.a-2-bb {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap-reverse;
+  justify-content: flex-end;
+  padding-bottom: 75px;
+  margin-left: 150px;
+  margin-right: 150px;
+  overflow: auto
+}
+
+.a-2-cc {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap-reverse;
+  justify-content: center;
+  padding-bottom: 75px;
+  margin-left: 150px;
+  margin-right: 150px;
+  overflow: auto
+}
+
+.a-2-dd {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap-reverse;
+  justify-content: space-between;
+  padding-bottom: 75px;
+  margin-left: 150px;
+  margin-right: 150px;
+  overflow: auto
+}
+
+.a-2-ee {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap-reverse;
+  justify-content: space-around;
+  padding-bottom: 75px;
+  margin-left: 150px;
+  margin-right: 150px;
+  overflow: auto
+}
+
+.a-2-ff {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap-reverse;
+  justify-content: space-evenly;
+  padding-bottom: 75px;
+  margin-left: 150px;
+  margin-right: 150px;
+  overflow: auto
+}
+
+.a-3-aa {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  padding-bottom: 75px;
+  margin-left: 150px;
+  margin-right: 150px;
+  overflow: auto
+}
+
+.a-3-bb {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  padding-bottom: 75px;
+  margin-left: 150px;
+  margin-right: 150px;
+  overflow: auto
+}
+
+.a-3-cc {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  padding-bottom: 75px;
+  margin-left: 150px;
+  margin-right: 150px;
+  overflow: auto
+}
+
+.a-3-dd {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding-bottom: 75px;
+  margin-left: 150px;
+  margin-right: 150px;
+  overflow: auto
+}
+
+.a-3-ee {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  padding-bottom: 75px;
+  margin-left: 150px;
+  margin-right: 150px;
+  overflow: auto
+}
+
+.a-3-ff {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  padding-bottom: 75px;
+  margin-left: 150px;
+  margin-right: 150px;
+  overflow: auto
+}
+
+/*  */
+
+.b-1-aa {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding-bottom: 75px;
+  margin-left: 150px;
+  margin-right: 150px;
+  overflow: auto
+}
+
+.b-1-bb {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  padding-bottom: 75px;
+  margin-left: 150px;
+  margin-right: 150px;
+  overflow: auto
+}
+
+.b-1-cc {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 75px;
+  margin-left: 150px;
+  margin-right: 150px;
+  overflow: auto
+}
+
+.b-1-dd {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 75px;
+  margin-left: 150px;
+  margin-right: 150px;
+  overflow: auto
+}
+
+.b-1-ee {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-bottom: 75px;
+  margin-left: 150px;
+  margin-right: 150px;
+  overflow: auto
+}
+
+.b-1-ff {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding-bottom: 75px;
+  margin-left: 150px;
+  margin-right: 150px;
+  overflow: auto
+}
+
+.b-2-aa {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap-reverse;
+  justify-content: flex-start;
+  padding-bottom: 75px;
+  margin-left: 150px;
+  margin-right: 150px;
+  overflow: auto
+}
+
+.b-2-bb {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap-reverse;
+  justify-content: flex-end;
+  padding-bottom: 75px;
+  margin-left: 150px;
+  margin-right: 150px;
+  overflow: auto
+}
+
+.b-2-cc {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap-reverse;
+  justify-content: center;
+  padding-bottom: 75px;
+  margin-left: 150px;
+  margin-right: 150px;
+  overflow: auto
+}
+
+.b-2-dd {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap-reverse;
+  justify-content: space-between;
+  padding-bottom: 75px;
+  margin-left: 150px;
+  margin-right: 150px;
+  overflow: auto
+}
+
+.b-2-ee {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap-reverse;
+  justify-content: space-around;
+  padding-bottom: 75px;
+  margin-left: 150px;
+  margin-right: 150px;
+  overflow: auto
+}
+
+.b-2-ff {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap-reverse;
+  justify-content: space-evenly;
+  padding-bottom: 75px;
+  margin-left: 150px;
+  margin-right: 150px;
+  overflow: auto
+}
+
+.b-3-aa {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  padding-bottom: 75px;
+  margin-left: 150px;
+  margin-right: 150px;
+  overflow: auto
+}
+
+.b-3-bb {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  padding-bottom: 75px;
+  margin-left: 150px;
+  margin-right: 150px;
+  overflow: auto
+}
+
+.b-3-cc {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: nowrap;
+  justify-content: center;
+  padding-bottom: 75px;
+  margin-left: 150px;
+  margin-right: 150px;
+  overflow: auto
+}
+
+.b-3-dd {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding-bottom: 75px;
+  margin-left: 150px;
+  margin-right: 150px;
+  overflow: auto
+}
+
+.b-3-ee {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  padding-bottom: 75px;
+  margin-left: 150px;
+  margin-right: 150px;
+  overflow: auto
+}
+
+.b-3-ff {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  padding-bottom: 75px;
+  margin-left: 150px;
+  margin-right: 150px;
+  overflow: auto
+}
+
+/*  */
+
+.c-1-aa {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding-bottom: 75px;
+  margin-left: 150px;
+  margin-right: 150px;
+  height: 100vh;
+  overflow: auto
+}
+
+.c-1-bb {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  padding-bottom: 75px;
+  margin-left: 150px;
+  margin-right: 150px;
+  height: 100vh;
+  overflow: auto
+}
+
+.c-1-cc {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 75px;
+  margin-left: 150px;
+  margin-right: 150px;
+  height: 100vh;
+  overflow: auto
+}
+
+.c-1-dd {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 75px;
+  margin-left: 150px;
+  margin-right: 150px;
+  height: 100vh;
+  overflow: auto
+}
+
+.c-1-ee {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-bottom: 75px;
+  margin-left: 150px;
+  margin-right: 150px;
+  height: 100vh;
+  overflow: auto
+}
+
+.c-1-ff {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding-bottom: 75px;
+  margin-left: 150px;
+  margin-right: 150px;
+  height: 100vh;
+  overflow: auto
+}
+
+.c-2-aa {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap-reverse;
+  justify-content: flex-start;
+  padding-bottom: 75px;
+  margin-left: 150px;
+  margin-right: 150px;
+  height: 100vh;
+  overflow: auto
+}
+
+.c-2-bb {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap-reverse;
+  justify-content: flex-end;
+  padding-bottom: 75px;
+  margin-left: 150px;
+  margin-right: 150px;
+  height: 100vh;
+  overflow: auto
+}
+
+.c-2-cc {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap-reverse;
+  justify-content: center;
+  padding-bottom: 75px;
+  margin-left: 150px;
+  margin-right: 150px;
+  height: 100vh;
+  overflow: auto
+}
+
+.c-2-dd {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap-reverse;
+  justify-content: space-between;
+  padding-bottom: 75px;
+  margin-left: 150px;
+  margin-right: 150px;
+  height: 100vh;
+  overflow: auto
+}
+
+.c-2-ee {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap-reverse;
+  justify-content: space-around;
+  padding-bottom: 75px;
+  margin-left: 150px;
+  margin-right: 150px;
+  height: 100vh;
+  overflow: auto
+}
+
+.c-2-ff {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap-reverse;
+  justify-content: space-evenly;
+  padding-bottom: 75px;
+  margin-left: 150px;
+  margin-right: 150px;
+  height: 100vh;
+  overflow: auto
+}
+
+.c-3-aa {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  padding-bottom: 75px;
+  margin-left: 150px;
+  margin-right: 150px;
+  height: 100vh;
+  overflow: auto
+}
+
+.c-3-bb {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  padding-bottom: 75px;
+  margin-left: 150px;
+  margin-right: 150px;
+  height: 100vh;
+  overflow: auto
+}
+
+.c-3-cc {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  padding-bottom: 75px;
+  margin-left: 150px;
+  margin-right: 150px;
+  height: 100vh;
+  overflow: auto
+}
+
+.c-3-dd {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding-bottom: 75px;
+  margin-left: 150px;
+  margin-right: 150px;
+  height: 100vh;
+  overflow: auto
+}
+
+.c-3-ee {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  padding-bottom: 75px;
+  margin-left: 150px;
+  margin-right: 150px;
+  height: 100vh;
+  overflow: auto
+}
+
+.c-3-ff {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  padding-bottom: 75px;
+  margin-left: 150px;
+  margin-right: 150px;
+  height: 100vh;
+  overflow: auto
+}
+
+/*  */
+
+.d-1-aa {
+  display: flex;
+  flex-direction: column-reverse;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding-bottom: 75px;
+  margin-left: 150px;
+  margin-right: 150px;
+  height: 100vh;
+  overflow: auto
+}
+
+.d-1-bb {
+  display: flex;
+  flex-direction: column-reverse;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  padding-bottom: 75px;
+  margin-left: 150px;
+  margin-right: 150px;
+  height: 100vh;
+  overflow: auto
+}
+
+.d-1-cc {
+  display: flex;
+  flex-direction: column-reverse;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 75px;
+  margin-left: 150px;
+  margin-right: 150px;
+  height: 100vh;
+  overflow: auto
+}
+
+.d-1-dd {
+  display: flex;
+  flex-direction: column-reverse;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 75px;
+  margin-left: 150px;
+  margin-right: 150px;
+  height: 100vh;
+  overflow: auto
+}
+
+.d-1-ee {
+  display: flex;
+  flex-direction: column-reverse;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-bottom: 75px;
+  margin-left: 150px;
+  margin-right: 150px;
+  height: 100vh;
+  overflow: auto
+}
+
+.d-1-ff {
+  display: flex;
+  flex-direction: column-reverse;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding-bottom: 75px;
+  margin-left: 150px;
+  margin-right: 150px;
+  height: 100vh;
+  overflow: auto
+}
+
+.d-2-aa {
+  display: flex;
+  flex-direction: column-reverse;
+  flex-wrap: wrap-reverse;
+  justify-content: flex-start;
+  padding-bottom: 75px;
+  margin-left: 150px;
+  margin-right: 150px;
+  height: 100vh;
+  overflow: auto
+}
+
+.d-2-bb {
+  display: flex;
+  flex-direction: column-reverse;
+  flex-wrap: wrap-reverse;
+  justify-content: flex-end;
+  padding-bottom: 75px;
+  margin-left: 150px;
+  margin-right: 150px;
+  height: 100vh;
+  overflow: auto
+}
+
+.d-2-cc {
+  display: flex;
+  flex-direction: column-reverse;
+  flex-wrap: wrap-reverse;
+  justify-content: center;
+  padding-bottom: 75px;
+  margin-left: 150px;
+  margin-right: 150px;
+  height: 100vh;
+  overflow: auto
+}
+
+.d-2-dd {
+  display: flex;
+  flex-direction: column-reverse;
+  flex-wrap: wrap-reverse;
+  justify-content: space-between;
+  padding-bottom: 75px;
+  margin-left: 150px;
+  margin-right: 150px;
+  height: 100vh;
+  overflow: auto
+}
+
+.d-2-ee {
+  display: flex;
+  flex-direction: column-reverse;
+  flex-wrap: wrap-reverse;
+  justify-content: space-around;
+  padding-bottom: 75px;
+  margin-left: 150px;
+  margin-right: 150px;
+  height: 100vh;
+  overflow: auto
+}
+
+.d-2-ff {
+  display: flex;
+  flex-direction: column-reverse;
+  flex-wrap: wrap-reverse;
+  justify-content: space-evenly;
+  padding-bottom: 75px;
+  margin-left: 150px;
+  margin-right: 150px;
+  height: 100vh;
+  overflow: auto
+}
+
+.d-3-aa {
+  display: flex;
+  flex-direction: column-reverse;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  padding-bottom: 75px;
+  margin-left: 150px;
+  margin-right: 150px;
+  height: 100vh;
+  overflow: auto
+}
+
+.d-3-bb {
+  display: flex;
+  flex-direction: column-reverse;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  padding-bottom: 75px;
+  margin-left: 150px;
+  margin-right: 150px;
+  height: 100vh;
+  overflow: auto
+}
+
+.d-3-cc {
+  display: flex;
+  flex-direction: column-reverse;
+  flex-wrap: nowrap;
+  justify-content: center;
+  padding-bottom: 75px;
+  margin-left: 150px;
+  margin-right: 150px;
+  height: 100vh;
+  overflow: auto
+}
+
+.d-3-dd {
+  display: flex;
+  flex-direction: column-reverse;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding-bottom: 75px;
+  margin-left: 150px;
+  margin-right: 150px;
+  height: 100vh;
+  overflow: auto
+}
+
+.d-3-ee {
+  display: flex;
+  flex-direction: column-reverse;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  padding-bottom: 75px;
+  margin-left: 150px;
+  margin-right: 150px;
+  height: 100vh;
+  overflow: auto
+}
+
+.d-3-ff {
+  display: flex;
+  flex-direction: column-reverse;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  padding-bottom: 75px;
+  margin-left: 150px;
+  margin-right: 150px;
+  height: 100vh;
+  overflow: auto
 }
