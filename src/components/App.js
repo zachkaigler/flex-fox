@@ -17,6 +17,7 @@ function App() {
     }
   }
 
+  // Generates a random array of foxes on page load
   useEffect(() => {
     setFoxes(function() {
         let arr = []
@@ -28,17 +29,6 @@ function App() {
         return arr
       })
   }, [])
-
-  // Generates a collection of random fox images
-  // const foxes = function() {
-  //   let arr = []
-  //   let counter = 0
-  //   while (counter < getRandomInt(201) ) {
-  //     counter += 1
-  //     arr = [...arr, { img: `https://randomfox.ca/images/${getRandomInt(124)}.jpg`, num: counter} ]
-  //   }
-  //   return arr
-  // }
   
   // Returns an array of FoxCard components for each fox to render
   const foxPics = foxes.map(function(foxPic) {
@@ -64,10 +54,12 @@ function App() {
     <div className="page">
       <div className="sticky">
         <div id="header">
-          <img src="https://i.imgur.com/gV3WbHd.png" alt="logo" style={{height: "200px"}}/>
+          <img src="https://i.imgur.com/gV3WbHd.png" alt="logo" style={{height: "170px"}}/>
+          <h2>An adorable Flexbox learning tool.</h2>
+          <h3>Made with the <a href="https://randomfox.ca/">Random Fox API.</a></h3>
         </div>
         <div id="filters">
-            <h3>Flexbox Attributes:</h3>
+            <h3>Flexbox Container Attributes:</h3>
             <select name="flex-direction" onChange={e => handleDirChange(e)}>
               <option value="a">flex-direction</option>
               <option value="a">row</option>

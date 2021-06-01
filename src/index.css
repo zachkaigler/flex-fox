@@ -69,24 +69,51 @@ table {
   top: 0;
   left: 0;
   z-index: 10;
-  /* width: 100%; */
-  /* overflow: auto;  */
-  /* display: inline-block */
 }
 
 #header {
   text-align: center;
   background-color: #ffd4a9;
   margin: 0px;
+  padding-bottom: 20px;
 }
 
 #header img {
 background-color: #ffd4a9;
 }
 
+#header h2, h3, a {
+  background-color: transparent;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#header h2 {
+  color: #4b4b4b;
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 5px;
+  margin-bottom: 3px;
+}
+
+#header a {
+  color: #e1770b;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+#header a:hover {
+  color: #c7690b;
+}
+
+#header h3 {
+  color: #4b4b4b;
+  font-size: 13px;
+}
+
 #filters {
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
   background-color: #f7c089;
 }
 
@@ -120,7 +147,7 @@ background-color: #ffd4a9;
   margin-right: 150px;
 }
 
-/* default - row, wrap, space even */
+/* default flexbox styling - row, wrap, space even */
 .a1 {
   display: flex;
   flex-direction: row;
@@ -131,7 +158,9 @@ background-color: #ffd4a9;
   margin-right: 150px;
 }
 
-/*  */
+/* Flexflow toggle variants below */
+
+/* row */
 
 .a-1-aa {
   display: flex;
@@ -331,7 +360,7 @@ background-color: #ffd4a9;
   overflow: auto
 }
 
-/*  */
+/* row-reverse */
 
 .b-1-aa {
   display: flex;
@@ -531,7 +560,7 @@ background-color: #ffd4a9;
   overflow: auto
 }
 
-/*  */
+/* column */
 
 .c-1-aa {
   display: flex;
@@ -749,7 +778,7 @@ background-color: #ffd4a9;
   overflow: auto
 }
 
-/*  */
+/* column reverse */
 
 .d-1-aa {
   display: flex;
