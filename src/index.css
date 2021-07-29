@@ -42,8 +42,14 @@ table {
 	border-spacing: 0;
 }
 
-* {
+.page {
+  display: flex;
+  flex-direction: row;
   background-color: #fff1e3;
+}
+
+.main-content {
+  width: 100vw;
 }
 
 .card {
@@ -63,24 +69,17 @@ table {
   -webkit-text-stroke-color: black;
 }
 
-.sticky {
+#header {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
   left: 0;
   z-index: 10;
-}
-
-#header {
+  height: 100vh;
+  width: 27rem;
   text-align: center;
   background-color: #ffd4a9;
   margin: 0px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-#header img {
-background-color: #ffd4a9;
 }
 
 #header h2, h3, a {
@@ -111,13 +110,26 @@ background-color: #ffd4a9;
   font-size: 13px;
 }
 
-#filters {
-  text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #f7c089;
+.top {
+  height: 20vh;
+  min-height: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
-#filters h3 {
+#filters {
+  height: 65vh;
+  min-height: 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
   background-color: #f7c089;
 }
 
@@ -127,7 +139,7 @@ background-color: #ffd4a9;
   margin-left: 10px;
   margin-right: 2px;
   font-family: 'Courier New', Courier, monospace;
-  font-size: 15px;
+  font-size: 1.1rem;
   background-color: transparent;
   border-color: transparent;
   color: #4b4b4b;
@@ -135,14 +147,42 @@ background-color: #ffd4a9;
 }
 
 .select-label {
-  background-color: transparent;
   font-family: 'Courier New', Courier, monospace;
-  color: #4b4b4b;
-  font-size: 15px;
+  color: #d68032;
+  font-weight: bold;
+  font-size: 1.1rem;
 }
 
 .select-label-bold {
+  color: #4b4b4b;
+  font-size: 1.4rem;
+}
+
+.select-block {
+  margin-left: 2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+button {
+  min-height: 3rem;
+  width: 10rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
   font-weight: bold;
+  border: 2px solid;
+  border-radius: 10px;
+  color: #4b4b4b;
+  border-color: #d68032;
+  background-color: #fdf1e5;
+}
+
+button:hover {
+  background-color: #f2e6da;
+}
+
+button:active:hover {
+  background-color: #e2d6ca;
 }
 
 .card img {
@@ -154,4 +194,27 @@ background-color: #ffd4a9;
   position: fixed;
   bottom: 25px;
   right: 25px;
+}
+
+span#top-label {
+  margin-bottom: 3.5rem;
+}
+
+span#bottom-label {
+  margin-top: 3.5rem;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  min-height: 3rem;
+}
+
+.footer p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .8rem;
+  color: #c39c74;
+  margin-top: 2.5rem;
 }
