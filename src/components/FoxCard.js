@@ -1,7 +1,7 @@
 function FoxCard({ img, num }) {
     return (
         <div className="card">
-            <img src={img} alt="fox" style={{width: "300px"}}/>
+            <img src={img} alt="fox"/>
             <div className="num">{num}</div>
         </div>
     )
